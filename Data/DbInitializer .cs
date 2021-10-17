@@ -99,8 +99,6 @@ namespace MovieRatingApi.Data
             var movieType = context.MediaTypes.FirstOrDefault(x => x.Key == "MOVIE").Id;
             var tvShow = context.MediaTypes.FirstOrDefault(x => x.Key == "TV_SHOW").Id;
 
-            //var cast = context.Actors;
-
             var movies = new Media[]
             {
                 new Media {
@@ -112,7 +110,6 @@ namespace MovieRatingApi.Data
                     "Peter Parker is drafted into the Avengers by Stark to help with an internal dispute in Berlin,[N 3] but resumes his studies at the Midtown School of Science and Technology when Stark tells him he is not yet ready to become a full Avenger... ",
                     ReleaseDate = DateTime.Parse("2017-06-28"),
                     TypeId = movieType,
-                    ////Actors = new List<Actor> { cast.FirstOrDefault(x => x.Name == "Tom"), cast.FirstOrDefault(x => x.Name == "Robert") }
                 },
                 new Media {
                     Title = "Captain America: Civil War",
@@ -122,7 +119,6 @@ namespace MovieRatingApi.Data
                     "Rumlow blows himself up, attempting to kill Rogers. Maximoff telekinetically diverts the explosion, accidentally destroying a nearby building and killing several Wakandan humanitarian workers in the process...",
                     ReleaseDate = DateTime.Parse("2016-4-12"),
                     TypeId = movieType,
-                    //Actors = new List<Actor> { cast.FirstOrDefault(x => x.Name == "Tom"), cast.FirstOrDefault(x => x.Name == "Robert"), cast.FirstOrDefault(x => x.Name == "Chris") }
                 },
                 new Media {
                     Title = "Avengers: Infinity War",
@@ -133,7 +129,6 @@ namespace MovieRatingApi.Data
                     "drawing Peter Parker's attention. Maw is unable to take the Time Stone due to an enchantment and captures Strange. Stark and Parker sneak aboard Maw's spaceship while Wong stays behind to guard the Sanctum ...",
                     ReleaseDate = DateTime.Parse("2018-04-23"),
                     TypeId = movieType,
-                    //Actors = new List<Actor> { cast.FirstOrDefault(x => x.Name == "Tom"), cast.FirstOrDefault(x => x.Name == "Robert"), cast.FirstOrDefault(x => x.Name == "Chris") }
                 },
                 new Media {
                     Title = "The Curious Case of Benjamin Button",
@@ -142,7 +137,6 @@ namespace MovieRatingApi.Data
                     "World War I, including his own son, could come home again and live full lives. Mr. Gateau was never seen again. Daisy then asks Caroline to read aloud from the diary of Benjamin Button. ...",
                     ReleaseDate = DateTime.Parse("2008-12-25"),
                     TypeId = movieType,
-                    //Actors = new List<Actor> { cast.FirstOrDefault(x => x.Name == "Brad"), cast.FirstOrDefault(x => x.Name == "Mark") }
                 },
                 new Media {
                     Title = "Interview with the Vampire",
@@ -152,7 +146,6 @@ namespace MovieRatingApi.Data
                     "killing, Louis comes to suffer tremendously as a vampire. ...",
                     ReleaseDate = DateTime.Parse("1994-11-11"),
                     TypeId = movieType,
-                    //Actors = new List<Actor> { cast.FirstOrDefault(x => x.Name == "Brad"), cast.FirstOrDefault(x => x.Name == "Mark") }
                 },
                 new Media {
                     Title = "Meet Joe Black",
@@ -161,7 +154,6 @@ namespace MovieRatingApi.Data
                     "While studying in a coffee shop, Susan meets a vibrant young man who also says \"lightning may strike\" a relationship between them. Stunned, she departs without getting his name. Unbeknownst to her, directly afterward, he is struck by multiple cars",
                     ReleaseDate = DateTime.Parse("1998-11-13"),
                     TypeId = movieType,
-                    //Actors = new List<Actor> { cast.FirstOrDefault(x => x.Name == "Brad"), cast.FirstOrDefault(x => x.Name == "Anthony") }
                 },
                 new Media {
                     Title = "Hannibal ",
@@ -169,7 +161,6 @@ namespace MovieRatingApi.Data
                     "during the Gumb investigation. A wealthy child molester, Verger was paralyzed and disfigured by Lecter during a therapy session. He has been pursuing an elaborate scheme to capture, torture, and kill Lecter ever since. Using his wealth and political influence, Verger has Starling reassigned to Lecter's case, hoping her involvement will draw Lecter out. ...",
                     ReleaseDate = DateTime.Parse("2001-02-09"),
                     TypeId = movieType,
-                    //Actors = new List<Actor> { cast.FirstOrDefault(x => x.Name == "Chris"), cast.FirstOrDefault(x => x.Name == "Mark") }
                 },
                 new Media {
                     Title = "The Mask of Zorro",
@@ -178,7 +169,6 @@ namespace MovieRatingApi.Data
                     "and de la Vega's wife Esperanza, whom Montero was in love with, is shot and killed during the ensuing scuffle. While Diego's home burns, Montero takes his infant daughter, Elena, as his own before sending de la Vega to prison and returning to Spain.  ...",
                     ReleaseDate = DateTime.Parse("1998-07-17"),
                     TypeId = movieType,
-                    //Actors = new List<Actor> { cast.FirstOrDefault(x => x.Name == "Antonio"), cast.FirstOrDefault(x => x.Name == "Anthony") }
                 },
                 new Media {
                     Title = "Thor",
@@ -186,7 +176,6 @@ namespace MovieRatingApi.Data
                     "In the present,[N 2] Odin's son Thor prepares to ascend to the throne of Asgard, but is interrupted when Frost Giants, secretly allowed in by his brother Loki, attempt to retrieve the Casket. Against Odin's order, Thor travels to Jotunheim to confront Laufey, accompanied by Loki, childhood friend Sif an ...",
                     ReleaseDate = DateTime.Parse("2011-04-17"),
                     TypeId = movieType,
-                    //Actors = new List<Actor> { cast.FirstOrDefault(x => x.Name == "Tom"), cast.FirstOrDefault(x => x.Name == "Robert"), cast.FirstOrDefault(x => x.Name == "Chris") }
                 },
                 new Media {
                     Title = "Thor: The Dark World",
@@ -194,7 +183,6 @@ namespace MovieRatingApi.Data
                     "to Bor, Malekith and a handful of Dark Elves escape into suspended animation. ...",
                     ReleaseDate = DateTime.Parse("2013-10-22"),
                     TypeId = movieType,
-                    //Actors = new List<Actor> { cast.FirstOrDefault(x => x.Name == "Tom"), cast.FirstOrDefault(x => x.Name == "Robert"), cast.FirstOrDefault(x => x.Name == "Chris") }
                 },
                 new Media {
                     Title = "Thor: Ragnarok",
@@ -202,7 +190,6 @@ namespace MovieRatingApi.Data
                     "Thor frees himself, defeats Surtur and takes his crown, believing he has prevented Ragnarök. ...",
                     ReleaseDate = DateTime.Parse("2017-10-10"),
                     TypeId = movieType,
-                    //Actors = new List<Actor> { cast.FirstOrDefault(x => x.Name == "Tom"), cast.FirstOrDefault(x => x.Name == "Robert"), cast.FirstOrDefault(x => x.Name == "Chris") }
                 },
                 new Media {
                     Title = "The Avengers",
@@ -210,7 +197,6 @@ namespace MovieRatingApi.Data
                     "arrives at a remote research facility, where physicist Dr. Erik Selvig is leading a team experimenting on the Tesseract. The Tesseract suddenly activates and ...",
                     ReleaseDate = DateTime.Parse("2012-04-11"),
                     TypeId = movieType,
-                    //Actors = new List<Actor> { cast.FirstOrDefault(x => x.Name == "Tom"), cast.FirstOrDefault(x => x.Name == "Robert"), cast.FirstOrDefault(x => x.Name == "Chris") }
                 },
                 new Media {
                     Title = "Avengers: Endgame",
@@ -218,7 +204,6 @@ namespace MovieRatingApi.Data
                     "they plan to use the Infinity Stones to reverse his actions, but discover Thanos has already destroyed them to prevent further use. Enraged, Thor decapitates Thanos ...",
                     ReleaseDate = DateTime.Parse("2019-04-26"),
                     TypeId = movieType,
-                    //Actors = new List<Actor> { cast.FirstOrDefault(x => x.Name == "Tom"), cast.FirstOrDefault(x => x.Name == "Robert"), cast.FirstOrDefault(x => x.Name == "Chris") }
                 },
                 new Media {
                     Title = "Shang-Chi and the Legend of the Ten Rings",
@@ -226,7 +211,6 @@ namespace MovieRatingApi.Data
                     "forest to the village entrance but is stopped by guardian Ying Li. The two fall in love, and Wenwu abandons the Ten Rings. When the villagers reject Wenwu, Li chooses to leave with him and they have two children, Shang-Chi and Xialing. When Shang-Chi is 7, Li is murdered by Wenwu's enemies, the Iron Gang. Wenwu massacres the Iron Gang...",
                     ReleaseDate = DateTime.Parse("2021-08-16"),
                     TypeId = movieType,
-                    //Actors = new List<Actor> { cast.FirstOrDefault(x => x.Name == "Tom"), cast.FirstOrDefault(x => x.Name == "Robert"), cast.FirstOrDefault(x => x.Name == "Chris") }
                 },
                 new Media {
                     Title = "Dark Waters",
@@ -234,7 +218,6 @@ namespace MovieRatingApi.Data
                     "manufacturing corporation DuPont, and gives Robert a large case of videotapes. ...",
                     ReleaseDate = DateTime.Parse("2019-12-19"),
                     TypeId = movieType,
-                    //Actors = new List<Actor> { cast.FirstOrDefault(x => x.Name == "Mark"), cast.FirstOrDefault(x => x.Name == "Jennifer") }
                 },
                 new Media {
                     Title = "Friends",
@@ -243,7 +226,6 @@ namespace MovieRatingApi.Data
                     "Ross Geller, a sweet-natured but insecure paleontologist. ...",
                     ReleaseDate = DateTime.Parse("1994-09-22"),
                     TypeId = tvShow,
-                    //Actors = new List<Actor> { cast.FirstOrDefault(x => x.Name == "Tom"), cast.FirstOrDefault(x => x.Name == "Robert"), cast.FirstOrDefault(x => x.Name == "Chris") }
                 },
                 new Media {
                     Title = "How I Met Your Mother",
@@ -251,7 +233,6 @@ namespace MovieRatingApi.Data
                     "The story goes into a flashback and starts in 2005 with the 27-year-old Ted Mosby living in New York City and working as an architect. ...",
                     ReleaseDate = DateTime.Parse("2005-09-19"),
                     TypeId = tvShow,
-                    //Actors = new List<Actor> { cast.FirstOrDefault(x => x.Name == "Tom"), cast.FirstOrDefault(x => x.Name == "Robert"), cast.FirstOrDefault(x => x.Name == "Chris") }
                 },
                 new Media {
                     Title = "Frasier",
@@ -259,7 +240,6 @@ namespace MovieRatingApi.Data
                     "Police Department detective, who has mobility problems after being shot in the line of duty during a robbery....",
                     ReleaseDate = DateTime.Parse("1993-09-16"),
                     TypeId = tvShow,
-                    //Actors = new List<Actor> { cast.FirstOrDefault(x => x.Name == "Tom"), cast.FirstOrDefault(x => x.Name == "Robert"), cast.FirstOrDefault(x => x.Name == "Chris") }
                 },
                 new Media {
                     Title = "The Walking Dead",
@@ -268,7 +248,6 @@ namespace MovieRatingApi.Data
                     " the body entirely, such as by cremating it....",
                     ReleaseDate = DateTime.Parse("2010-10-31"),
                     TypeId = tvShow,
-                    //Actors = new List<Actor> { cast.FirstOrDefault(x => x.Name == "Tom"), cast.FirstOrDefault(x => x.Name == "Robert"), cast.FirstOrDefault(x => x.Name == "Chris") }
                 },
                 new Media {
                     Title = "Game of Thrones",
@@ -277,7 +256,6 @@ namespace MovieRatingApi.Data
                     "fighting for independence from the throne. The second concerns the exiled scion's actions to reclaim the throne; the third chronicles the threat of the impending winter, as well as the legendary creatures and fierce peoples of the North...",
                     ReleaseDate = DateTime.Parse("2011-04-11"),
                     TypeId = tvShow,
-                    //Actors = new List<Actor> { cast.FirstOrDefault(x => x.Name == "Tom"), cast.FirstOrDefault(x => x.Name == "Robert"), cast.FirstOrDefault(x => x.Name == "Chris") }
                 },
                 new Media {
                     Title = "Breaking Bad",
@@ -286,7 +264,6 @@ namespace MovieRatingApi.Data
                     "larger batches of a special blue meth that is incredibly pure and creates high demand....",
                     ReleaseDate = DateTime.Parse("2008-01-20"),
                     TypeId = tvShow,
-                    //Actors = new List<Actor> { cast.FirstOrDefault(x => x.Name == "Tom"), cast.FirstOrDefault(x => x.Name == "Robert"), cast.FirstOrDefault(x => x.Name == "Chris") }
                 },
                 new Media {
                     Title = "The Big Bang Theory",
@@ -294,7 +271,6 @@ namespace MovieRatingApi.Data
                     "pilot was substantially different from the series' current form. The only main characters retained in both pilots were Leonard (Johnny Galecki) and Sheldon (Jim Parsons), who are named after Sheldon Leonard, a longtime figure in episodic television as producer, director and actor....",
                     ReleaseDate = DateTime.Parse("2007-09-24"),
                     TypeId = tvShow,
-                    //Actors = new List<Actor> { cast.FirstOrDefault(x => x.Name == "Tom"), cast.FirstOrDefault(x => x.Name == "Robert"), cast.FirstOrDefault(x => x.Name == "Chris") }
                 },
                 new Media {
                     Title = "Stranger Things",
@@ -302,7 +278,6 @@ namespace MovieRatingApi.Data
                     "and supernatural, including those that involve human test subjects. Inadvertently, they have created a portal to an alternate dimension, \"the Upside Down\". The influence of the Upside Down starts to affect the unknowing residents of Hawkins in calamitous ways....",
                     ReleaseDate = DateTime.Parse("2016-07-16"),
                     TypeId = tvShow,
-                    //Actors = new List<Actor> { cast.FirstOrDefault(x => x.Name == "Tom"), cast.FirstOrDefault(x => x.Name == "Robert"), cast.FirstOrDefault(x => x.Name == "Chris") }
                 },
                 new Media {
                     Title = "Squid Game",
@@ -311,7 +286,6 @@ namespace MovieRatingApi.Data
                     "₩100 million to the potential ₩45.6 billion grand prize.[a] Gi-hun allies with other players, including his childhood friend Cho Sang-woo, to try to survive the physical and psychological twists of the games....",
                     ReleaseDate = DateTime.Parse("2021-09-17"),
                     TypeId = tvShow,
-                    //Actors = new List<Actor> { cast.FirstOrDefault(x => x.Name == "Tom"), cast.FirstOrDefault(x => x.Name == "Robert"), cast.FirstOrDefault(x => x.Name == "Chris") }
                 },
                 new Media {
                     Title = "Another Life",
@@ -319,21 +293,18 @@ namespace MovieRatingApi.Data
                     "with the alien structure. Wallace's wife, Captain Niko Breckinridge (Katee Sackhoff), takes the spaceship Salvare and its millenial crew to determine the origin of the artifact and establish first contact with the species who sent it...",
                     ReleaseDate = DateTime.Parse("2019-07-25"),
                     TypeId = tvShow,
-                    //Actors = new List<Actor> { cast.FirstOrDefault(x => x.Name == "Tom"), cast.FirstOrDefault(x => x.Name == "Robert"), cast.FirstOrDefault(x => x.Name == "Chris") }
                 },
                 new Media {
                     Title = "The Witcher",
                     Description = "The show's first season follows Geralt of Rivia, Crown Princess Ciri, and the sorceress Yennefer of Vengerberg at different points of time, exploring formative events that shaped their characters, before eventually merging into a single timeline culminating at the battle for Sodden Hill against the invaders from Nilfgaard...",
                     ReleaseDate = DateTime.Parse("2019-12-20"),
                     TypeId = tvShow,
-                    //Actors = new List<Actor> { cast.FirstOrDefault(x => x.Name == "Tom"), cast.FirstOrDefault(x => x.Name == "Robert"), cast.FirstOrDefault(x => x.Name == "Chris") }
                 },
                 new Media {
                     Title = "Chilling Adventures of Sabrina",
                     Description = "Chilling Adventures of Sabrina is set in the fictional town of Greendale. It is a dark coming-of-age story that includes horror, fear and witchcraft. Sabrina Spellman must reconcile her dual nature as a half-witch, half-mortal while fighting the evil forces that threaten her, her family, and the daylight world humans inhabit...",
                     ReleaseDate = DateTime.Parse("2018-10-26"),
                     TypeId = tvShow,
-                    //Actors = new List<Actor> { cast.FirstOrDefault(x => x.Name == "Tom"), cast.FirstOrDefault(x => x.Name == "Robert"), cast.FirstOrDefault(x => x.Name == "Chris") }
                 },
                 new Media {
                     Title = "Shadow and Bone",
@@ -341,7 +312,6 @@ namespace MovieRatingApi.Data
                     "Ravka's Second Army is led by General Kirigan, who has spent his life searching for a Grisha who can summon light; the only person who could destroy the Shadow Fold—a region of impenetrable darkness, created hundreds of years ago. Since then, Ravka has been at war, and is now on the brink of splitting in two as the west seeks independence....",
                     ReleaseDate = DateTime.Parse("2021-04-23"),
                     TypeId = tvShow,
-                    //Actors = new List<Actor> { cast.FirstOrDefault(x => x.Name == "Tom"), cast.FirstOrDefault(x => x.Name == "Robert") }
                 },
                 new Media {
                     Title = "The Flash",
@@ -349,7 +319,6 @@ namespace MovieRatingApi.Data
                     "uncovering that his mentor Harrison Wells is Eobard in disguise. By the end of the season, Eobard's ancestor Eddie sacrifices himself to erase Eobard from existence only to open a singularity in the process. ...",
                     ReleaseDate = DateTime.Parse("2014-10-07"),
                     TypeId = tvShow,
-                    //Actors = new List<Actor> { cast.FirstOrDefault(x => x.Name == "Tom"), cast.FirstOrDefault(x => x.Name == "Chris") }
                 },
                 new Media {
                     Title = "House",
@@ -357,7 +326,6 @@ namespace MovieRatingApi.Data
                     "drama by The New York Times Magazine column, \"Diagnosis\", written by physician Lisa Sanders, who is an attending physician at Yale–New Haven Hospital (YNHH); the fictitious Princeton–Plainsboro Teaching Hospital (PPTH, not to be confused with the University Medical Center of Princeton at Plainsboro) is modeled after this teaching institution...",
                     ReleaseDate = DateTime.Parse("2004-11-04"),
                     TypeId = tvShow,
-                    //Actors = new List<Actor> { cast.FirstOrDefault(x => x.Name == "Robert"), cast.FirstOrDefault(x => x.Name == "Chris") }
                 }
             };
 
