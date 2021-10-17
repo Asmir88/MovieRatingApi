@@ -17,12 +17,9 @@ namespace MovieRatingApi.Controllers
     {
         private readonly MovieRatingApiContext _context;
 
-        private readonly ILogger<MediaController> _logger;
-
-        public MediaController(ILogger<MediaController> logger, MovieRatingApiContext context)
+        public MediaController(MovieRatingApiContext context)
         {
             _context = context;
-            _logger = logger;
         }
 
         [HttpGet("{text?}")]
@@ -41,13 +38,13 @@ namespace MovieRatingApi.Controllers
 
             if (string.IsNullOrEmpty(text))
             {
-                return mediaList.Take(10);
+                return mediaList;
             }
             else
             {
                 var filteredMedia  = FilteringAccordingToRating(mediaList, text.ToLower());
                 filteredMedia = filteredMedia.Count() > 0 ? filteredMedia : FilterAccordingToYear(mediaList, text.ToLower());
-                return filteredMedia.Count() > 0 ? filteredMedia : FilterOutMedias(mediaList, text).Take(10);
+                return filteredMedia.Count() > 0 ? filteredMedia : FilterOutMedias(mediaList, text);
             }
         }
 
