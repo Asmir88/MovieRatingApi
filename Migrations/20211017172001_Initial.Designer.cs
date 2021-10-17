@@ -10,7 +10,7 @@ using MovieRatingApi.Data;
 namespace MovieRatingApi.Migrations
 {
     [DbContext(typeof(MovieRatingApiContext))]
-    [Migration("20211017102613_Initial")]
+    [Migration("20211017172001_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -118,10 +118,15 @@ namespace MovieRatingApi.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("Value")
+                    b.Property<int>("MediaId")
                         .HasColumnType("int");
 
+                    b.Property<double>("Value")
+                        .HasColumnType("float");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("MediaId");
 
                     b.ToTable("Ratings");
                 });
@@ -154,6 +159,17 @@ namespace MovieRatingApi.Migrations
                         .IsRequired();
 
                     b.Navigation("Type");
+                });
+
+            modelBuilder.Entity("MovieRatingApi.Models.Rating", b =>
+                {
+                    b.HasOne("MovieRatingApi.Models.Media", "Media")
+                        .WithMany()
+                        .HasForeignKey("MediaId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Media");
                 });
 
             modelBuilder.Entity("MovieRatingApi.Models.Actor", b =>

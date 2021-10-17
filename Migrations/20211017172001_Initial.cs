@@ -36,19 +36,6 @@ namespace MovieRatingApi.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Ratings",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Value = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Ratings", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "Medias",
                 columns: table => new
                 {
@@ -98,6 +85,26 @@ namespace MovieRatingApi.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "Ratings",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Value = table.Column<double>(type: "float", nullable: false),
+                    MediaId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Ratings", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Ratings_Medias_MediaId",
+                        column: x => x.MediaId,
+                        principalTable: "Medias",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
             migrationBuilder.CreateIndex(
                 name: "IX_ActorMedias_ActorId",
                 table: "ActorMedias",
@@ -112,6 +119,11 @@ namespace MovieRatingApi.Migrations
                 name: "IX_Medias_TypeId",
                 table: "Medias",
                 column: "TypeId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Ratings_MediaId",
+                table: "Ratings",
+                column: "MediaId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

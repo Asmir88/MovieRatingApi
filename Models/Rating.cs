@@ -1,7 +1,13 @@
-﻿namespace MovieRatingApi.Models
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace MovieRatingApi.Models
 {
     public class Rating : BaseModel
     {
-        public int Value { get; set; }
+        public double Value { get; set; }
+        public int MediaId { get; set; }
+
+        [ForeignKey("MediaId")]
+        public Media Media { get; set; }
     }
 }

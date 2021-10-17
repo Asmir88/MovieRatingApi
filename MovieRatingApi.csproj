@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
@@ -23,12 +23,7 @@
 
   <ItemGroup>
     <Folder Include="App_Data\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Update="App_Data\MovieRatingApiContext_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+    <Folder Include="Images\" />
   </ItemGroup>
 
 
